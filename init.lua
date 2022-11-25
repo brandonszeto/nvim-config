@@ -9,3 +9,6 @@ require("vimtex")
 
 -- Airline Configurations
 require("airline")
+
+-- Keymap Configurations
+require("keymaps")

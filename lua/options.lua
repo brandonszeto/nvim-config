@@ -5,21 +5,38 @@ local options = {
 	relativenumber = true,
 	number = true,
 	cursorline = true,
-	showtabline = 2,
 	showmode = true,
 
-	-- Window options 
+	-- Tab options
+	expandtab = true,
+	smarttab = true,
+	tabstop = 4,
+	smartindent = true,
+
+	-- Above tab options
+	showtabline = 1,
+
+	-- Window options
 	splitright = true,
 	splitbelow = true,
 
 	-- Miscellaneous options
 	clipboard = "unnamedplus",
-	smartindent = true,
+	scrolloff = 2,
+
+	-- Enables mouse
 	mouse = "a",
 
 	-- Searching options
 	ignorecase = true,
-	hlsearch = false,
+	smartcase = true,
+	hlsearch = true,
+	incsearch = true,
+
+	-- File options
+	swapfile = false,
+	backup = false,
+	writebackup = false,
 }
 
 for k, v in pairs(options) do
