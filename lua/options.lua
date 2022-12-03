@@ -49,4 +49,4 @@ require("transparent").setup({
 })
 
 -- Set Colorscheme
-cmd("colorscheme nordfox")
+cmd("colorscheme gruvbox")
