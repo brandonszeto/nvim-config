@@ -44,9 +44,9 @@ for k, v in pairs(options) do
 end
 
 -- Make Background Transparent
-require("transparent").setup({
-	enable = true,
-})
+-- require("transparent").setup({
+-- 	enable = false,
+-- })
 
 -- Set Colorscheme
 cmd("colorscheme gruvbox")

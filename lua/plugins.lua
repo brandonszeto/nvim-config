@@ -4,16 +4,25 @@ return require("packer").startup(function()
 
 	-- Themes
 	use("ellisonleao/gruvbox.nvim")
-	use("xiyaowong/nvim-transparent")
-	use("projekt0n/github-nvim-theme")
-	use("folke/tokyonight.nvim")
-	use("EdenEast/nightfox.nvim")
+	-- use("xiyaowong/nvim-transparent")
+	-- use("projekt0n/github-nvim-theme")
+	-- use("folke/tokyonight.nvim")
+	-- use("EdenEast/nightfox.nvim")
 
 	use("neovim/nvim-lspconfig")
-	use("preservim/nerdtree")
 	use("tpope/vim-commentary")
 	use("tpope/vim-surround")
+
+	-- Nvim Tree
+	use("nvim-tree/nvim-tree.lua")
+	use("nvim-tree/nvim-web-devicons")
+
+	-- Treesitter
 	use("nvim-treesitter/nvim-treesitter")
+	use("p00f/nvim-ts-rainbow")
+
+	-- Tmux
+	use("christoomey/vim-tmux-navigator")
 
 	-- Formatter
 	use({
@@ -28,5 +37,4 @@ return require("packer").startup(function()
 	-- Airline
 	use("vim-airline/vim-airline")
 	use("vim-airline/vim-airline-themes")
-
 end)

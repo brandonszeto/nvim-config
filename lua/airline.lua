@@ -1,3 +1,3 @@
 local g = vim.g
 
-g.airline_theme = "bubblegum"
+g.airline_theme = "base16"

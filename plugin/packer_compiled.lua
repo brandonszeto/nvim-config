@@ -81,50 +81,40 @@ _G.packer_plugins = {
     path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/opt/formatter.nvim",
     url = "https://github.com/mhartington/formatter.nvim"
   },
-  ["github-nvim-theme"] = {
-    loaded = true,
-    path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
-    url = "https://github.com/projekt0n/github-nvim-theme"
-  },
   ["gruvbox.nvim"] = {
     loaded = true,
     path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
-  },
-  nerdtree = {
-    loaded = true,
-    path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/start/nerdtree",
-    url = "https://github.com/preservim/nerdtree"
-  },
-  ["nightfox.nvim"] = {
-    loaded = true,
-    path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
-    url = "https://github.com/EdenEast/nightfox.nvim"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
-  ["nvim-transparent"] = {
+  ["nvim-tree.lua"] = {
     loaded = true,
-    path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/start/nvim-transparent",
-    url = "https://github.com/xiyaowong/nvim-transparent"
+    path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/nvim-tree/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-ts-rainbow"] = {
+    loaded = true,
+    path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow",
+    url = "https://github.com/p00f/nvim-ts-rainbow"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
-  },
-  ["tokyonight.nvim"] = {
-    loaded = true,
-    path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
-    url = "https://github.com/folke/tokyonight.nvim"
   },
   ["vim-airline"] = {
     loaded = true,
@@ -145,6 +135,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
+  },
+  ["vim-tmux-navigator"] = {
+    loaded = true,
+    path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
+    url = "https://github.com/christoomey/vim-tmux-navigator"
   },
   vimtex = {
     loaded = true,
