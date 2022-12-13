@@ -23,6 +23,7 @@ local options = {
 	-- Miscellaneous options
 	clipboard = "unnamedplus",
 	scrolloff = 2,
+	termguicolors = true,
 
 	-- Enables mouse
 	mouse = "a",
@@ -49,4 +50,4 @@ end
 -- })
 
 -- Set Colorscheme
-cmd("colorscheme gruvbox")
+-- cmd("colorscheme gruvbox")

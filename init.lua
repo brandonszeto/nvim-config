@@ -13,12 +13,14 @@ require("airline")
 -- Keymap Configurations
 require("keymaps")
 
+-- Nvim Tree
+require("nvim-tree").setup()
+
 -- Treesitter Configurations
 require("treesitter")
 
 -- Make Background Transparent
 -- require("transparent").setup({
-
 -- 	enable = false,
 -- })
 
