@@ -1,28 +1,17 @@
--- Options
-require("options")
-
--- Plugins Configurations
-require("plugins")
-
--- VimTex Configurations
-require("vimtex")
-
--- Airline Configurations
-require("airline")
-
--- Keymap Configurations
+-- Keymap
 require("keymaps")
 
 -- Nvim Tree
-require("nvim-tree").setup()
+require("nvimtree")
 
--- Treesitter Configurations
+-- Options
+require("options")
+
+-- Plugins
+require("plugins")
+
+-- Treesitter
 require("treesitter")
 
--- Make Background Transparent
--- require("transparent").setup({
--- 	enable = false,
--- })
-
--- Set Colorscheme
-vim.cmd("colorscheme gruvbox")
+-- VimTex
+require("vimtex")
