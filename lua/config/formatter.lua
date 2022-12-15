@@ -28,6 +28,15 @@ local function latexindent()
 	}
 end
 
+local function rustfmt()
+	return {
+		exe = "rustfmt",
+		args = { "--emit=stdout", "--edition=2021" },
+		cwd = vim.fn.expand("%:p:h"),
+		stdin = true,
+	}
+end
+
 require("formatter").setup({
 	logging = false,
 	filetype = {
@@ -41,5 +50,7 @@ require("formatter").setup({
 		lua = { stylua },
 
 		tex = { latexindent },
+
+		rust = { rustfmt },
 	},
 })

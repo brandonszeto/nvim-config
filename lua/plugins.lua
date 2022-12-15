@@ -9,7 +9,6 @@ return require("packer").startup(function()
 	-- use("folke/tokyonight.nvim")
 	-- use("EdenEast/nightfox.nvim")
 
-	use("neovim/nvim-lspconfig")
 	use("tpope/vim-commentary")
 	use("tpope/vim-surround")
 
@@ -34,7 +33,11 @@ return require("packer").startup(function()
 	-- Vimtex
 	use("lervag/vimtex")
 
-	-- Airline
-	use("vim-airline/vim-airline")
-	use("vim-airline/vim-airline-themes")
+	-- Bufferline
+	use("akinsho/bufferline.nvim")
+	use("moll/vim-bbye")
+
+	-- Language Server Protocol
+	use("neovim/nvim-lspconfig")
+	-- use("hrsh7th/cmp-nvim-lsp")
 end)

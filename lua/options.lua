@@ -44,10 +44,5 @@ for k, v in pairs(options) do
 	vim.opt[k] = v
 end
 
--- Make Background Transparent
--- require("transparent").setup({
--- 	enable = false,
--- })
-
 -- Set Colorscheme
--- cmd("colorscheme gruvbox")
+cmd("colorscheme gruvbox")
