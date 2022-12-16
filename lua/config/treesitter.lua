@@ -1,10 +1,10 @@
-local status_ok, configs = pcall(require, "nvim-treesitter.configs")
+local status_ok, treesitter = pcall(require, "nvim-treesitter.configs")
 if not status_ok then
 	return
 end
 
-configs.setup({
-	ensure_installed = "",
+treesitter.setup({
+	ensure_installed = { "c", "lua", "rust", "cpp" },
 	sync_install = false,
 	ignore_install = { "" },
 	highlight = {

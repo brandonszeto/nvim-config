@@ -46,9 +46,8 @@ return packer.startup(function(use)
 	use("ellisonleao/gruvbox.nvim")
 	-- use("xiyaowong/nvim-transparent")
 
-	-- Below plugins lazily loaded for various plugins they are required for
-	-- use("nvim-lua/plenary.nvim") -- Provides extra modules
-	-- use("nvim-lua/popup.nvim")   -- Implementation of pop-up API
+	use("nvim-lua/plenary.nvim") -- Provides extra modules
+	use("nvim-lua/popup.nvim") -- Implementation of pop-up API
 
 	-- Faster startup
 	use("lewis6991/impatient.nvim")
@@ -68,6 +67,13 @@ return packer.startup(function(use)
 		"nvim-treesitter/nvim-treesitter",
 		config = [[require('config.treesitter')]],
 		-- requires = { "p00f/nvim-ts-rainbow" }, -- ugly af but maybe
+	})
+
+	-- Lualine for status line
+	use({
+		"nvim-lualine/lualine.nvim",
+		config = [[require('config.lualine')]],
+		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
 
 	-- For seamless tmux integration
@@ -101,7 +107,7 @@ return packer.startup(function(use)
 	-- Show changes to file
 	use({
 		"lewis6991/gitsigns.nvim",
-		requires = { "nvim-lua/plenary.nvim" },
+		-- requires = { "nvim-lua/plenary.nvim" },
 		config = [[require('config.gitsigns')]],
 	})
 
