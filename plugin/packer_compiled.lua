@@ -81,12 +81,6 @@ _G.packer_plugins = {
     path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/opt/formatter.nvim",
     url = "https://github.com/mhartington/formatter.nvim"
   },
-  ["gitsigns.nvim"] = {
-    config = { "require('config.gitsigns')" },
-    loaded = true,
-    path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
-    url = "https://github.com/lewis6991/gitsigns.nvim"
-  },
   ["gruvbox.nvim"] = {
     loaded = true,
     path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
@@ -130,16 +124,6 @@ _G.packer_plugins = {
     path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
-  ["plenary.nvim"] = {
-    loaded = true,
-    path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/start/plenary.nvim",
-    url = "https://github.com/nvim-lua/plenary.nvim"
-  },
-  ["popup.nvim"] = {
-    loaded = true,
-    path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/start/popup.nvim",
-    url = "https://github.com/nvim-lua/popup.nvim"
-  },
   ["vim-commentary"] = {
     loaded = true,
     path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/start/vim-commentary",
@@ -177,18 +161,14 @@ time([[packadd for formatter.nvim]], false)
 time([[Config for nvim-treesitter]], true)
 require('config.treesitter')
 time([[Config for nvim-treesitter]], false)
--- Config for: formatter.nvim
-time([[Config for formatter.nvim]], true)
-require('config.formatter')
-time([[Config for formatter.nvim]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 require('config.nvimtree')
 time([[Config for nvim-tree.lua]], false)
--- Config for: gitsigns.nvim
-time([[Config for gitsigns.nvim]], true)
-require('config.gitsigns')
-time([[Config for gitsigns.nvim]], false)
+-- Config for: formatter.nvim
+time([[Config for formatter.nvim]], true)
+require('config.formatter')
+time([[Config for formatter.nvim]], false)
 -- Config for: lualine.nvim
 time([[Config for lualine.nvim]], true)
 require('config.lualine')

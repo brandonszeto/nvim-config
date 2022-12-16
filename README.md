@@ -1,2 +1,1 @@
 ## My NeoVim Configuration
-- Testing

@@ -43,11 +43,25 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	-- Themes
-	use("ellisonleao/gruvbox.nvim")
+	use({ "ellisonleao/gruvbox.nvim" })
 	-- use("xiyaowong/nvim-transparent")
 
-	use("nvim-lua/plenary.nvim") -- Provides extra modules
-	use("nvim-lua/popup.nvim") -- Implementation of pop-up API
+	-- Fuzzy finder with telescope config ripped from nathom
+	-- use({
+	-- 	"nvim-telescope/telescope.nvim",
+	-- 	requires = {
+	-- 		"nvim-lua/popup.nvim",
+	-- 		"nvim-lua/plenary.nvim",
+	-- 		"kyazdani42/nvim-web-devicons",
+	-- 	},
+	-- 	setup = [[require('config.telescope_setup')]],
+	-- 	config = [[require('config.telescope')]],
+	-- 	cmd = "Telescope",
+	-- 	module = "telescope",
+	-- })
+
+	-- use("nvim-lua/plenary.nvim") -- Provides extra modules
+	-- use("nvim-lua/popup.nvim") -- Implementation of pop-up API
 
 	-- Faster startup
 	use("lewis6991/impatient.nvim")
@@ -104,12 +118,12 @@ return packer.startup(function(use)
 
 	use("neovim/nvim-lspconfig")
 
-	-- Show changes to file
-	use({
-		"lewis6991/gitsigns.nvim",
-		-- requires = { "nvim-lua/plenary.nvim" },
-		config = [[require('config.gitsigns')]],
-	})
+	-- Show git changes
+	-- use({
+	-- 	"lewis6991/gitsigns.nvim",
+	-- 	requires = { "nvim-lua/plenary.nvim" },
+	-- 	config = [[require('config.gitsigns')]],
+	-- })
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
