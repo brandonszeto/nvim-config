@@ -1,4 +1,4 @@
-local set g = vim.g
+local g = vim.g
 
 g.tex_flavor = "latex"
 g.vimtex_view_method = "skim"

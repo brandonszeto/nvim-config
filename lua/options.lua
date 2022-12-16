@@ -1,43 +1,46 @@
-local cmd = vim.cmd
+-- For help, do :help options
 
 local options = {
-	-- Visual options
-	relativenumber = true,
-	number = true,
-	cursorline = true,
-	showmode = true,
-
-	-- Tab options
-	expandtab = true,
-	smarttab = true,
-	tabstop = 4,
-	smartindent = true,
-
-	-- Above tab options
-	showtabline = 1,
-
-	-- Window options
-	splitright = true,
-	splitbelow = true,
-
-	-- Miscellaneous options
-	clipboard = "unnamedplus",
-	scrolloff = 2,
-	termguicolors = true,
-
-	-- Enables mouse
-	mouse = "a",
-
-	-- Searching options
-	ignorecase = true,
-	smartcase = true,
-	hlsearch = true,
-	incsearch = true,
-
-	-- File options
-	swapfile = false,
 	backup = false,
+	clipboard = "unnamedplus",
+	cmdheight = 1,
+	completeopt = {},
+	conceallevel = 0,
+	fileencoding = "utf-8",
+	hlsearch = true,
+	ignorecase = true,
+	mouse = "a",
+	pumheight = 10,
+	showmode = true,
+	showtabline = 1,
+	smartindent = true,
+	splitbelow = true,
+	splitright = true,
+	swapfile = false,
+	termguicolors = true,
+	timeoutlen = 1000,
+	undofile = true,
+	updatetime = 300,
 	writebackup = false,
+	expandtab = true,
+	shiftwidth = 4,
+	tabstop = 4,
+	cursorline = true,
+	number = true,
+	laststatus = 3,
+	showcmd = false,
+	ruler = false,
+	numberwidth = 4,
+	textwidth = 80,
+	signcolumn = "no",
+	wrap = true,
+	scrolloff = 2,
+	sidescrolloff = 8,
+	guifont = "monospace:h17",
+	relativenumber = true,
+	smarttab = true,
+	smartcase = true,
+	incsearch = true,
 }
 
 for k, v in pairs(options) do
@@ -45,4 +48,4 @@ for k, v in pairs(options) do
 end
 
 -- Set Colorscheme
-cmd("colorscheme gruvbox")
+vim.cmd("colorscheme gruvbox")
