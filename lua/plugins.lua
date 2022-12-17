@@ -42,72 +42,68 @@ return packer.startup(function(use)
 	-- Plugin Manager
 	use("wbthomason/packer.nvim")
 
+	-- Faster startup
+	use("lewis6991/impatient.nvim")
+
 	-- Themes
 	use({ "ellisonleao/gruvbox.nvim" })
 	-- use("xiyaowong/nvim-transparent")
 
-	-- Fuzzy finder with telescope config ripped from nathom
-	-- use({
-	-- 	"nvim-telescope/telescope.nvim",
-	-- 	requires = {
-	-- 		"nvim-lua/popup.nvim",
-	-- 		"nvim-lua/plenary.nvim",
-	-- 		"kyazdani42/nvim-web-devicons",
-	-- 	},
-	-- 	setup = [[require('config.telescope_setup')]],
-	-- 	config = [[require('config.telescope')]],
-	-- 	cmd = "Telescope",
-	-- 	module = "telescope",
-	-- })
+	-- Telescope
+	use({
+		"nvim-telescope/telescope.nvim",
+		requires = {
+			"nvim-lua/popup.nvim",
+			"nvim-lua/plenary.nvim",
+			"kyazdani42/nvim-web-devicons",
+		},
+		config = [[require('config.telescope')]],
+	})
 
-	-- use("nvim-lua/plenary.nvim") -- Provides extra modules
-	-- use("nvim-lua/popup.nvim") -- Implementation of pop-up API
-
-	-- Faster startup
-	use("lewis6991/impatient.nvim")
-
-	use("tpope/vim-commentary")
-	use("tpope/vim-surround")
-
-	-- Nvim-tree for nice file explorer, support for dumb icons
+	-- NvimTree
 	use({
 		"nvim-tree/nvim-tree.lua",
 		config = [[require('config.nvimtree')]],
 		requires = { "nvim-tree/nvim-web-devicons" },
 	})
 
-	-- Treesitter for better highlighting
+	-- Treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		config = [[require('config.treesitter')]],
 		-- requires = { "p00f/nvim-ts-rainbow" }, -- ugly af but maybe
 	})
 
-	-- Lualine for status line
+	-- Lualine
 	use({
 		"nvim-lualine/lualine.nvim",
 		config = [[require('config.lualine')]],
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
 
-	-- For seamless tmux integration
+	-- Tmux integration
 	use("christoomey/vim-tmux-navigator")
 
-	-- Format on write
+	-- Formatter
 	use({
 		"mhartington/formatter.nvim",
 		config = [[require('config.formatter')]],
 		setup = [[require('config.formatter_setup')]],
 	})
 
-	-- use("hrsh7th/nvim-cmp")
-	-- use("hrsh7th/cmp-buffer")
+	use("hrsh7th/cmp-buffer")
 	-- use("hrsh7th/cmp-path")
-	-- use("saadparwaiz1/cmp_luasnip")
-	-- use("hrsh7th/cmp-nvim-lsp")
+	use("saadparwaiz1/cmp_luasnip")
+	use("hrsh7th/cmp-nvim-lsp")
 	-- use("hrsh7th/cmp-nvim-lua")
-	-- use("L3MON4D3/LuaSnip")
-	-- use("rafamadriz/friendly-snippets")
+	use("L3MON4D3/LuaSnip")
+	use("rafamadriz/friendly-snippets")
+
+	-- Completion
+	use({
+		"hrsh7th/nvim-cmp",
+		config = [[require('config.cmp')]],
+	})
 
 	-- VimTeX to build and compile LaTeX with NeoVim
 	use({
@@ -117,6 +113,8 @@ return packer.startup(function(use)
 	})
 
 	use("neovim/nvim-lspconfig")
+	use("tpope/vim-commentary")
+	use("tpope/vim-surround")
 
 	-- Show git changes
 	-- use({
