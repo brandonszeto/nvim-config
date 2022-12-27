@@ -14,10 +14,20 @@ lsp_installer.on_server_ready(function(server)
 		opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
 	end
 
-	-- if server.name = "pyright" then
-	--     local pyright_opts = require("lsp.settings.pyright")
-	--     opts = vim.tbl_deep_extend("force", pyright_opts, opts)
-	-- end
+	if server.name == "clangd" then
+		local clangd_opts = require("config.lsp.settings.clangd")
+		opts = vim.tbl_deep_extend("force", clangd_opts, opts)
+	end
+
+	if server.name == "pyright" then
+		local pyright_opts = require("config.lsp.settings.pyright")
+		opts = vim.tbl_deep_extend("force", pyright_opts, opts)
+	end
+
+	if server.name == "rust_analyzer" then
+		local rust_analyzer_opts = require("config.lsp.settings.rust_analyzer")
+		opts = vim.tbl_deep_extend("force", rust_analyzer_opts, opts)
+	end
 
 	server:setup(opts)
 end)
