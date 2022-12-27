@@ -91,11 +91,14 @@ return packer.startup(function(use)
 		setup = [[require('config.formatter_setup')]],
 	})
 
+	-- Completion Sources
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
 	use("saadparwaiz1/cmp_luasnip")
 	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-nvim-lua")
+
+	-- Completion snippets
 	use("L3MON4D3/LuaSnip")
 	use("rafamadriz/friendly-snippets")
 
@@ -112,16 +115,21 @@ return packer.startup(function(use)
 		ft = { "tex" },
 	})
 
-	use("neovim/nvim-lspconfig")
+	-- LSP
+	use("williamboman/nvim-lsp-installer")
+	use({
+		"neovim/nvim-lspconfig",
+		config = [[require('config.lsp')]],
+	})
+
 	use("tpope/vim-commentary")
 	use("tpope/vim-surround")
 
-	-- Show git changes
-	-- use({
-	-- 	"lewis6991/gitsigns.nvim",
-	-- 	requires = { "nvim-lua/plenary.nvim" },
-	-- 	config = [[require('config.gitsigns')]],
-	-- })
+	use({
+		"lewis6991/gitsigns.nvim",
+		requires = { "nvim-lua/plenary.nvim" },
+		config = [[require('config.gitsigns')]],
+	})
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

@@ -22,3 +22,9 @@ treesitter.setup({
 	-- 	-- termcolors = {} -- table of colour name strings
 	-- },
 })
+
+local o = vim.opt
+
+o.foldmethod = "expr"
+o.foldexpr = "nvim_treesitter#foldexpr()"
+vim.api.nvim_command('set nofoldenable')
