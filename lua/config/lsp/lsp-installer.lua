@@ -29,5 +29,15 @@ lsp_installer.on_server_ready(function(server)
 		opts = vim.tbl_deep_extend("force", rust_analyzer_opts, opts)
 	end
 
+	if server.name == "gopls" then
+		local gopls_opts = require("config.lsp.settings.gopls")
+		opts = vim.tbl_deep_extend("force", gopls_opts, opts)
+	end
+
+	if server.name == "ltex" then
+		local ltex_opts = require("config.lsp.settings.ltex")
+		opts = vim.tbl_deep_extend("force", ltex_opts, opts)
+	end
+
 	server:setup(opts)
 end)
