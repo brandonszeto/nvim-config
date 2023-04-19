@@ -60,6 +60,12 @@ return packer.startup(function(use)
 		config = [[require('config.telescope')]],
 	})
 
+	-- Orgmode
+	use({
+		"nvim-orgmode/orgmode",
+		config = [[require('config.orgmode')]],
+	})
+
 	-- NvimTree
 	use({
 		"nvim-tree/nvim-tree.lua",
@@ -116,11 +122,11 @@ return packer.startup(function(use)
 	})
 
 	-- LSP
-	use("williamboman/nvim-lsp-installer")
-	use({
-		"neovim/nvim-lspconfig",
-		config = [[require('config.lsp')]],
-	})
+	-- use("williamboman/nvim-lsp-installer")
+	-- use({
+	-- 	"neovim/nvim-lspconfig",
+	-- 	config = [[require('config.lsp')]],
+	-- })
 
 	use("tpope/vim-commentary")
 	use("tpope/vim-surround")

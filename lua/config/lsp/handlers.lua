@@ -77,14 +77,14 @@ local function lsp_keymaps(bufnr)
 	keymap(bufnr, "n", "<leader>lq", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 end
 
-M.on_attach = function(client, bufnr)
-	if client.name == "sumneko_lua" then
-		client.server_capabilities.documentFormattingProvider = false
-	end
+-- M.on_attach = function(client, bufnr)
+-- 	-- if client.name == "sumneko_lua" then
+-- 	-- 	client.server_capabilities.documentFormattingProvider = false
+-- 	-- end
 
-	lsp_keymaps(bufnr)
-	-- lsp_highlight_document(client)
-end
+-- 	lsp_keymaps(bufnr)
+-- 	-- lsp_highlight_document(client)
+-- end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 

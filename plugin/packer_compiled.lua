@@ -144,17 +144,6 @@ _G.packer_plugins = {
     path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
-  ["nvim-lsp-installer"] = {
-    loaded = true,
-    path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
-    url = "https://github.com/williamboman/nvim-lsp-installer"
-  },
-  ["nvim-lspconfig"] = {
-    config = { "require('config.lsp')" },
-    loaded = true,
-    path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
-    url = "https://github.com/neovim/nvim-lspconfig"
-  },
   ["nvim-tree.lua"] = {
     config = { "require('config.nvimtree')" },
     loaded = true,
@@ -171,6 +160,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
+  orgmode = {
+    config = { "require('config.orgmode')" },
+    loaded = true,
+    path = "/Users/brandonszeto/.local/share/nvim/site/pack/packer/start/orgmode",
+    url = "https://github.com/nvim-orgmode/orgmode"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -226,38 +221,38 @@ time([[Setup for formatter.nvim]], false)
 time([[packadd for formatter.nvim]], true)
 vim.cmd [[packadd formatter.nvim]]
 time([[packadd for formatter.nvim]], false)
--- Config for: nvim-lspconfig
-time([[Config for nvim-lspconfig]], true)
-require('config.lsp')
-time([[Config for nvim-lspconfig]], false)
--- Config for: nvim-cmp
-time([[Config for nvim-cmp]], true)
-require('config.cmp')
-time([[Config for nvim-cmp]], false)
 -- Config for: formatter.nvim
 time([[Config for formatter.nvim]], true)
 require('config.formatter')
 time([[Config for formatter.nvim]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-require('config.nvimtree')
-time([[Config for nvim-tree.lua]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-require('config.telescope')
-time([[Config for telescope.nvim]], false)
--- Config for: gitsigns.nvim
-time([[Config for gitsigns.nvim]], true)
-require('config.gitsigns')
-time([[Config for gitsigns.nvim]], false)
 -- Config for: nvim-treesitter
 time([[Config for nvim-treesitter]], true)
 require('config.treesitter')
 time([[Config for nvim-treesitter]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+require('config.nvimtree')
+time([[Config for nvim-tree.lua]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+require('config.cmp')
+time([[Config for nvim-cmp]], false)
 -- Config for: lualine.nvim
 time([[Config for lualine.nvim]], true)
 require('config.lualine')
 time([[Config for lualine.nvim]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+require('config.telescope')
+time([[Config for telescope.nvim]], false)
+-- Config for: orgmode
+time([[Config for orgmode]], true)
+require('config.orgmode')
+time([[Config for orgmode]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+require('config.gitsigns')
+time([[Config for gitsigns.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
