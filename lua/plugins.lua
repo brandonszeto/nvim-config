@@ -121,6 +121,16 @@ return packer.startup(function(use)
 		ft = { "tex" },
 	})
 
+	use({
+		"iamcco/markdown-preview.nvim",
+		config = [[require('config.markdown_preview')]],
+		run = "cd app && npm install",
+		setup = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	})
+
 	-- LSP
 	-- use("williamboman/nvim-lsp-installer")
 	-- use({
@@ -131,11 +141,10 @@ return packer.startup(function(use)
 	use("tpope/vim-commentary")
 	use("tpope/vim-surround")
 
-	use({
-		"lewis6991/gitsigns.nvim",
-		requires = { "nvim-lua/plenary.nvim" },
-		config = [[require('config.gitsigns')]],
-	})
+	-- use({
+	-- 	"lewis6991/gitsigns.nvim",
+	-- 	config = [[require('config.gitsigns')]],
+	-- })
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
