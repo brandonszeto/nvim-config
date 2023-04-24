@@ -15,6 +15,16 @@ require("nvim-treesitter.configs").setup({
 })
 
 require("orgmode").setup({
-	org_agenda_files = { "~/Dropbox/org/*", "~/my-orgs/**/*" },
-	org_default_notes_file = "~/Dropbox/org/refile.org",
+	org_agenda_files = {
+		"~/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org/*",
+		"~/my-orgs/**/*",
+	},
+	org_default_notes_file = "~/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org/refile.org",
+	org_capture_templates = {
+		i = {
+			description = "Inbox",
+			template = "* TODO %?\n %u",
+			target = "~/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org/todo.org",
+		},
+	},
 })
