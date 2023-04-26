@@ -139,7 +139,18 @@ return packer.startup(function(use)
 	-- })
 
 	use("tpope/vim-commentary")
+
 	use("tpope/vim-surround")
+
+	use("github/copilot.vim")
+
+	use({
+		"goolord/alpha-nvim",
+		requires = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require("alpha").setup(require("alpha.themes.startify").config)
+		end,
+	})
 
 	-- use({
 	-- 	"lewis6991/gitsigns.nvim",
