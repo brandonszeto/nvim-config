@@ -19,7 +19,4 @@ require("keymaps")
 -- Options
 require("options")
 
-require("lazy").setup('plugins')
-
--- Colorscheme
-vim.cmd([[colorscheme gruvbox]])
+require("lazy").setup("plugins")
