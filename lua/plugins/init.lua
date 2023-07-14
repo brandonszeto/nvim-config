@@ -1,19 +1,16 @@
 return {
-    -- Theme
-	"ellisonleao/gruvbox.nvim",
-
-    -- Faster startup
+	-- Faster startup
 	"lewis6991/impatient.nvim",
-    
-    -- Tmux integration
+
+	-- Tmux integration
 	"christoomey/vim-tmux-navigator",
 
-    -- Surround macros
+	-- Surround macros
 	"tpope/vim-surround",
 
-    -- Vim commentary
+	-- Vim commentary
 	"tpope/vim-commentary",
 
-    -- Github Copilot
+	-- Github Copilot
 	"github/copilot.vim",
 }
