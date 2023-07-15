@@ -40,7 +40,8 @@ return {
 					linehl = "GitSignsChangeLn",
 				},
 				untracked = {
-					text = "┆",
+					-- text = "┆",
+					text = "│",
 					highlight = "GitSignsAdd",
 					numhl = "GitSignsAddNr",
 					linehl = "GitSignsAddLn",
@@ -78,5 +79,6 @@ return {
 				enable = false,
 			},
 		})
+		vim.cmd("redraw")
 	end,
 }

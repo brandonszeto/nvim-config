@@ -17,6 +17,28 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 -- Toggle Nvim Tree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
--- Visual Mode
+-- Better Indenting
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
+
+-- Move selected line / block of text in visual mode
+keymap("v", "J", ":move '>+1<CR>gv-gv", opts)
+keymap("v", "K", ":move '<-2<CR>gv-gv", opts)
+
+-- Cursor stays in place when joining lines
+keymap("n", "J", "mzJ`z", opts)
+
+-- Cursor stays in place using <C-d> and <C-u>
+keymap("n", "<C-d>", "<C-d>zz", opts)
+keymap("n", "<C-u>", "<C-u>zz", opts)
+
+-- Better searching
+keymap("n", "n", "nzzzv", opts)
+keymap("n", "N", "Nzzzv", opts)
+
+-- Save register on paste
+keymap("x", "<leader>p", '"_dP', opts)
+
+-- Navigate buffers
+keymap("n", "<leader>bn", ":bnext<CR>", opts)
+keymap("n", "<leader>bp", ":bprevious<CR>", opts)
