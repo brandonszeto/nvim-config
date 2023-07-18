@@ -11,6 +11,12 @@ return {
 	-- Vim commentary
 	"tpope/vim-commentary",
 
+	-- Git support
+	"tpope/vim-fugitive",
+
 	-- Github Copilot
 	"github/copilot.vim",
+
+	-- Snippets
+	"sirver/ultisnips",
 }
