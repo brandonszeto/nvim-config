@@ -13,6 +13,9 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
+-- Replaces impatient.nvim
+vim.loader.enable()
+
 -- Keymaps
 require("keymaps")
 

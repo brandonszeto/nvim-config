@@ -1,7 +1,4 @@
 return {
-	-- Faster startup
-	"lewis6991/impatient.nvim",
-
 	-- Tmux integration
 	"christoomey/vim-tmux-navigator",
 
