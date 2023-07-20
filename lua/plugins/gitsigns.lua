@@ -1,5 +1,6 @@
 return {
 	"lewis6991/gitsigns.nvim",
+	lazy = false,
 	config = function()
 		-- Manually set these to avoid issues with colorschemes
 		vim.cmd("highlight GitSignsAdd guifg=#b8bb26 guibg=NONE")
@@ -79,6 +80,5 @@ return {
 				enable = false,
 			},
 		})
-		vim.cmd("redraw")
 	end,
 }

@@ -10,7 +10,7 @@ local function prettier()
 	}
 end
 
-function clangformat()
+local function clangformat()
 	local fn = vim.api.nvim_buf_get_name(0):gsub(".*/", "")
 	return {
 		exe = "clang-format",
