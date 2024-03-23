@@ -31,7 +31,7 @@ keymap("n", "J", "mzJ`z", opts)
 keymap("n", "<C-d>", "<C-d>zz", opts)
 keymap("n", "<C-u>", "<C-u>zz", opts)
 
--- Better searching
+-- Better searching (keep in the middle of screen)
 keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)
 
@@ -41,3 +41,7 @@ keymap("x", "<leader>p", '"_dP', opts)
 -- Navigate buffers
 keymap("n", "<leader>bn", ":bnext<CR>", opts)
 keymap("n", "<leader>bp", ":bprevious<CR>", opts)
+
+-- Don't skip paragraph when using j/k in wrapped lines
+keymap("n", "j", "gj", opts)
+keymap("n", "k", "gk", opts)
